@@ -1,34 +1,25 @@
 import React, { Component } from 'react';
 import './App.css';
 
-const Text = () => {
-  return(
-    <p> random tekst </p>
-  );
-}
+import { Provider } from 'react-redux';
+import store from './store';
 
-const Button = () =>{
-  return(
-    <button> (Un)Done </button>
-  );
-}
-
-const Task = () => {
-  return(
-    <div style={{display: "inline"}}>
-    <Button /> <Text />
-    </div>
-  );
-}
+import ToDoList from './components/ToDoList';
+import AddItemForm from './components/AddItemForm';
 
 class App extends Component {
   render() {
     return (
+      <Provider store={store}>
       <div className="App">
-        <Task />
+        <AddItemForm />
+        <ToDoList />
       </div>
+      </Provider>
     );
   }
 }
+
+
 
 export default App;

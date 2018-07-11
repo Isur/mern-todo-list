@@ -45,9 +45,9 @@ router.delete('/:id', (req,res) => {
 router.put('/:id', (req,res) => {
     Item.findById(req.params.id)
         .then(item => {
-            item.done = !req.body.done;
-            item.save().then(() => res.json({success:true}));
-        });
+            item.done = !item.done;
+            item.save().then(item => res.json(item));
+        }).catch(err=>res.status(404).json({success:false}));
 
 });
 

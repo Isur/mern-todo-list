@@ -1,0 +1,54 @@
+.task{
+    margin: auto;
+    background: grey;
+    display: inline-flex;
+    clear: left;
+    width: 70%;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    border: solid silver;
+}
+
+.task button{
+    margin: auto;
+    height: 100%;
+    width: 15%;
+}
+.task .taskText{
+    margin: auto;
+    margin-left: 15px;
+    width: 75%;
+    left: 25%;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+.task .taskTitle{
+    width: 100%;
+    margin-left: 35%;
+    font-weight: bolder;
+    font-size: larger;
+}
+.task .taskBody{
+    width: 70%;
+}
+.task .taskDate{
+    margin: auto;
+    height: 100%;
+    width: 20%;
+    padding: 5px;
+}
+
+.button_true{
+    background: green;
+}
+
+.button_false{
+    background: red;
+}
+
+form{
+    display: inline-flex;
+    flex-wrap: wrap;
+    max-width: 75%;
+}
